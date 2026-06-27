@@ -1,0 +1,20 @@
+{
+  "runtime": "ssh",
+  "ssh": {
+    "target": "user@your-vps.example",
+    "workspace": "/tmp/lotus",
+    "cleanupRemoteFile": true,
+    "healthCheck": {
+      "command": "uname -a",
+      "positiveResponse": "Linux"
+    }
+  },
+  "languages": {
+    "python": { "command": "python3 {file}", "extension": ".py" },
+    "shell": { "command": "bash {file}", "extension": ".sh" }
+  },
+  "outputFilters": {
+    "stripAnsi": true,
+    "stripStderr": ["^Warning: Permanently added.*\\n"]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "dualConfigs": false,
+  "showConsoleLog": false,
+  "desktop": {
+    "shortDelaySeconds": 5,
+    "longDelaySeconds": 15,
+    "delayBetweenPlugins": 40,
+    "defaultStartupType": null,
+    "showDescriptions": true,
+    "enableDependencies": false,
+    "plugins": {
+      "table-editor-obsidian": {
+        "startupType": "disabled"
+      },
+      "calendar": {
+        "startupType": "instant"
+      },
+      "dataview": {
+        "startupType": "instant"
+      },
+      "obsidian-excalidraw-plugin": {
+        "startupType": "instant"
+      },
+      "obsidian-hover-editor": {
+        "startupType": "instant"
+      },
+      "image-converter": {
+        "startupType": "instant"
+      },
+      "obsidian-latex-suite": {
+        "startupType": "instant"
+      },
+      "obsidian-linter": {
+        "startupType": "instant"
+      },
+      "multi-properties": {
+        "startupType": "instant"
+      },
+      "note-refactor-obsidian": {
+        "startupType": "instant"
+      },
+      "tag-wrangler": {
+        "startupType": "instant"
+      },
+      "obsidian-tasks-plugin": {
+        "startupType": "instant"
+      },
+      "templater-obsidian": {
+        "startupType": "instant"
+      },
+      "mermaid-tools": {
+        "startupType": "disabled"
+      },
+      "pseudocode-in-obs": {
+        "startupType": "instant"
+      },
+      "obsidian-tikzjax": {
+        "startupType": "instant"
+      },
+      "notebook-navigator": {
+        "startupType": "instant"
+      },
+      "metadata-menu": {
+        "startupType": "instant"
+      },
+      "obsidian-read-it-later": {
+        "startupType": "instant"
+      },
+      "obsidian-meta-bind-plugin": {
+        "startupType": "instant"
+      },
+      "better-export-pdf": {
+        "startupType": "instant"
+      },
+      "gemini-scribe": {
+        "startupType": "disabled"
+      },
+      "copilot": {
+        "startupType": "instant"
+      },
+      "obsidian-local-rest-api": {
+        "startupType": "instant"
+      },
+      "loom": {
+        "startupType": "disabled"
+      },
+      "lotus": {
+        "startupType": "disabled"
+      }
+    },
+    "loadOrder": []
+  }
+}

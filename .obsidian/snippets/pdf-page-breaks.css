@@ -1,0 +1,34 @@
+@media print {
+
+    /* Prevents headers from being stranded at the bottom of a page */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    /* Prevents tables, callouts, and code blocks from splitting in half */
+    table,
+    blockquote,
+    .callout,
+    pre {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* Custom utility to wrap and keep arbitrary sections together on the same page */
+    .keep-together {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* Custom utility to force a page break before an element */
+    .page-break {
+        page-break-before: always;
+        break-before: always;
+    }
+}

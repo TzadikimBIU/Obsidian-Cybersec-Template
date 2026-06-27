@@ -1,0 +1,35 @@
+# ─────────────────────────────────────────────
+# Obsidian Cybersec Template — .gitignore
+# ─────────────────────────────────────────────
+
+# Obsidian workspace state (user-local, do not commit)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Cache files
+.obsidian/cache
+.obsidian/plugins/*/data.json.bak
+
+# Large plugin assets (user must install plugins manually)
+.obsidian/plugins/obsidian-excalidraw-plugin/
+.obsidian/plugins/better-export-pdf/
+.obsidian/plugins/obsidian-tasks-plugin/
+.obsidian/plugins/obsidian-local-rest-api/
+.obsidian/plugins/copilot/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─────────────────────────────────────────────
+# CLIENT DATA PROTECTION (OPTIONAL)
+# ─────────────────────────────────────────────
+# Uncomment the lines below to exclude client engagement data from git.
+# This keeps sensitive pentest notes, findings, and evidence off GitHub.
+# RECOMMENDED if you push this vault to a remote repository.
+#
+# 010 Engagements/Active/
+# 010 Engagements/Archive/
+# 080 DFIR/Cases/
+# 021 Malware Analysis/*/Samples/

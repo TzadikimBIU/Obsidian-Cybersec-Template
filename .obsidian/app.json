@@ -1,0 +1,44 @@
+{
+  "alwaysUpdateLinks": true,
+  "attachmentFolderPath": "090 System/000 attachments",
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "1",
+    "downscalePercent": 100
+  },
+  "mobileToolbarCommands": [
+    "obsidian-excalidraw-plugin:excalidraw-autocreate-and-embed-popout",
+    "obsidian-excalidraw-plugin:excalidraw-autocreate-and-embed-new-tab",
+    "editor:insert-wikilink",
+    "editor:insert-embed",
+    "editor:insert-tag",
+    "editor:attach-file",
+    "editor:set-heading",
+    "editor:toggle-bold",
+    "editor:toggle-italics",
+    "editor:toggle-strikethrough",
+    "editor:toggle-highlight",
+    "editor:toggle-code",
+    "editor:toggle-blockquote",
+    "editor:insert-link",
+    "editor:toggle-bullet-list",
+    "editor:toggle-numbered-list",
+    "editor:toggle-checklist-status",
+    "editor:indent-list",
+    "editor:unindent-list",
+    "editor:undo",
+    "editor:redo",
+    "editor:configure-toolbar",
+    "editor:insert-table"
+  ],
+  "newFileLocation": "current",
+  "userIgnoreFilters": [
+    "090 System/"
+  ],
+  "promptDelete": false,
+  "mobilePullAction": "command-palette:open",
+  "showUnsupportedFiles": true,
+  "showLineNumber": false
+}

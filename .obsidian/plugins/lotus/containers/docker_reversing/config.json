@@ -1,0 +1,10 @@
+{
+  "runtime": "docker",
+  "image": "ghcr.io/radareorg/radare2:latest",
+  "elevation": { "mode": "default" },
+  "languages": {
+    "python": { "command": "python3 {file}", "extension": ".py" },
+    "c": { "command": "gcc {file} -o /tmp/lotus-bin && /tmp/lotus-bin", "extension": ".c" },
+    "shell": { "command": "bash {file}", "extension": ".sh" }
+  }
+}

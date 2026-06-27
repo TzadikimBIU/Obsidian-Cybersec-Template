@@ -1,0 +1,599 @@
+.lotus-codeblock-shell {
+  position: relative;
+}
+
+.lotus-code-toolbar {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  display: flex;
+  gap: 0.35rem;
+  z-index: 4;
+  padding: 0.25rem;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--background-modifier-border) 78%, transparent);
+  background: color-mix(in srgb, var(--background-primary) 88%, transparent);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  font-family: var(--font-interface);
+  white-space: normal;
+}
+
+.lotus-toolbar-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.lotus-toolbar-button:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.lotus-toolbar-button.is-running svg,
+.lotus-spinner {
+  animation: lotus-spin 0.9s linear infinite;
+}
+
+.lotus-inline-output-host {
+  margin-top: 0.65rem;
+}
+
+.lotus-stdin-panel {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding: 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--background-modifier-border) 75%, transparent);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--background-secondary) 88%, transparent);
+}
+
+.lotus-stdin-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.lotus-stdin-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.lotus-stdin-actions button {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.55rem;
+}
+
+.lotus-stdin-input {
+  min-height: 4.5rem;
+  resize: vertical;
+  font-family: var(--font-monospace);
+  font-size: 0.87rem;
+  line-height: 1.45;
+}
+
+.lotus-output-panel {
+  margin-top: 0.5rem;
+  border-radius: 14px;
+  border: 1px solid var(--background-modifier-border);
+  background: color-mix(in srgb, var(--background-secondary) 92%, transparent);
+  overflow: hidden;
+}
+
+.lotus-output-panel.is-hidden {
+  display: none;
+}
+
+.lotus-output-panel.is-success {
+  border-color: color-mix(in srgb, var(--color-green) 40%, var(--background-modifier-border));
+}
+
+.lotus-output-panel.is-warning {
+  border-color: color-mix(in srgb, var(--color-orange) 45%, var(--background-modifier-border));
+}
+
+.lotus-output-panel.is-failure {
+  border-color: color-mix(in srgb, var(--color-red) 48%, var(--background-modifier-border));
+}
+
+.lotus-output-panel.is-running {
+  border-style: dashed;
+}
+
+.lotus-output-header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.7rem 0.9rem;
+  background: color-mix(in srgb, var(--background-primary-alt) 65%, transparent);
+}
+
+.lotus-output-badge,
+.lotus-spinner {
+  width: 1.1rem;
+  height: 1.1rem;
+  color: var(--text-muted);
+}
+
+.lotus-output-title {
+  font-weight: 600;
+  color: var(--text-normal);
+}
+
+.lotus-output-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.lotus-output-body {
+  padding: 0.8rem 0.9rem 0.95rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.lotus-output-stream {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.lotus-output-stream-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.lotus-output-pre {
+  margin: 0;
+  padding: 0.75rem 0.8rem;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--background-primary) 90%, transparent);
+  border: 1px solid color-mix(in srgb, var(--background-modifier-border) 70%, transparent);
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--font-monospace);
+  font-size: 0.87rem;
+  line-height: 1.45;
+}
+
+.lotus-output-pre.is-scroll-limited {
+  max-height: calc((var(--lotus-output-visible-lines) * 1.45em) + 1.5rem);
+  overflow: auto;
+}
+
+.lotus-output-empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.lotus-live-input {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.55rem;
+  align-items: stretch;
+}
+
+.lotus-live-input-field {
+  min-height: 3.1rem;
+  resize: vertical;
+  font-family: var(--font-monospace);
+  font-size: 0.87rem;
+  line-height: 1.45;
+}
+
+.lotus-live-input-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.lotus-live-input-actions button {
+  min-width: 4rem;
+  height: 1.85rem;
+  padding: 0 0.65rem;
+}
+
+.lotus-signing-key-input,
+.lotus-signing-password-input {
+  width: 100%;
+  font-family: var(--font-monospace);
+}
+
+.lotus-signing-key-input {
+  min-height: 10rem;
+  resize: vertical;
+}
+
+.lotus-hidden-file-input {
+  display: none;
+}
+
+.lotus-source-preview {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.lotus-source-preview-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  cursor: pointer;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.lotus-source-preview-meta {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+
+.lotus-source-preview-pre {
+  max-height: 24rem;
+  overflow: auto;
+}
+
+.lotus-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.lotus-settings-section {
+  border-top: 1px solid var(--background-modifier-border);
+  padding: 0.35rem 0;
+}
+
+.lotus-settings-section:last-child {
+  border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.lotus-settings-summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text-normal);
+  padding: 0.65rem 0;
+}
+
+.lotus-settings-summary:hover {
+  color: var(--text-accent);
+}
+
+.lotus-settings-section-body {
+  padding: 0.1rem 0 0.6rem;
+}
+
+.lotus-log-view {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0.9rem;
+  overflow: auto;
+}
+
+.lotus-log-view-header,
+.lotus-log-filters,
+.lotus-log-event-summary,
+.lotus-log-event-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.lotus-log-view-header {
+  justify-content: space-between;
+}
+
+.lotus-log-view-header h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.lotus-log-view-actions button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+}
+
+.lotus-log-view-path,
+.lotus-log-summary,
+.lotus-log-empty,
+.lotus-log-event-time,
+.lotus-log-event-message,
+.lotus-log-meta-item {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+.lotus-log-filters {
+  flex-wrap: wrap;
+}
+
+.lotus-log-filter-query {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+.lotus-log-events {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.lotus-log-event {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-secondary);
+}
+
+.lotus-log-event.is-success {
+  border-color: color-mix(in srgb, var(--color-green) 36%, var(--background-modifier-border));
+}
+
+.lotus-log-event.is-failure {
+  border-color: color-mix(in srgb, var(--color-red) 42%, var(--background-modifier-border));
+}
+
+.lotus-log-event-summary {
+  cursor: pointer;
+  padding: 0.55rem 0.65rem;
+}
+
+.lotus-log-event-type {
+  flex: 0 0 auto;
+  font-family: var(--font-monospace);
+  font-size: 0.78rem;
+  color: var(--text-normal);
+}
+
+.lotus-log-event-message {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lotus-log-event-meta {
+  flex-wrap: wrap;
+  padding: 0 0.65rem 0.55rem;
+}
+
+.lotus-log-meta-item {
+  display: inline-flex;
+  gap: 0.3rem;
+  min-width: 0;
+}
+
+.lotus-log-meta-label {
+  color: var(--text-faint);
+}
+
+.lotus-log-event-json {
+  margin: 0 0.65rem 0.65rem;
+  max-height: 18rem;
+  overflow: auto;
+  border-radius: 6px;
+  background: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  padding: 0.65rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  white-space: pre-wrap;
+}
+
+.lotus-custom-language {
+  margin: 0.45rem 0;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-secondary);
+}
+
+.lotus-custom-language > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lotus-language-package {
+  margin: 0.45rem 0;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 8px;
+  background: var(--background-secondary);
+}
+
+.lotus-language-package > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.lotus-custom-language-body {
+  margin-top: 0.5rem;
+}
+
+.lotus-llvm-code .lotus-llvm-comment,
+.cm-line .lotus-llvm-comment {
+  color: var(--text-faint);
+  font-style: italic;
+}
+
+.lotus-llvm-code .lotus-llvm-string,
+.cm-line .lotus-llvm-string {
+  color: var(--color-green);
+}
+
+.lotus-llvm-code .lotus-llvm-string-prefix,
+.lotus-llvm-code .lotus-llvm-type,
+.cm-line .lotus-llvm-string-prefix,
+.cm-line .lotus-llvm-type {
+  color: var(--color-cyan);
+}
+
+.lotus-llvm-code .lotus-llvm-keyword-control,
+.lotus-llvm-code .lotus-llvm-keyword-declaration,
+.lotus-llvm-code .lotus-llvm-keyword-memory,
+.lotus-llvm-code .lotus-llvm-keyword-arithmetic,
+.lotus-llvm-code .lotus-llvm-keyword-comparison,
+.lotus-llvm-code .lotus-llvm-keyword-cast,
+.lotus-llvm-code .lotus-llvm-keyword-other,
+.cm-line .lotus-llvm-keyword-control,
+.cm-line .lotus-llvm-keyword-declaration,
+.cm-line .lotus-llvm-keyword-memory,
+.cm-line .lotus-llvm-keyword-arithmetic,
+.cm-line .lotus-llvm-keyword-comparison,
+.cm-line .lotus-llvm-keyword-cast,
+.cm-line .lotus-llvm-keyword-other {
+  color: var(--color-red);
+  font-weight: 600;
+}
+
+.lotus-llvm-code .lotus-llvm-keyword-modifier,
+.lotus-llvm-code .lotus-llvm-attribute,
+.lotus-llvm-code .lotus-llvm-attribute-group,
+.cm-line .lotus-llvm-keyword-modifier,
+.cm-line .lotus-llvm-attribute,
+.cm-line .lotus-llvm-attribute-group {
+  color: var(--color-orange);
+}
+
+.lotus-llvm-code .lotus-llvm-global,
+.lotus-llvm-code .lotus-llvm-intrinsic,
+.cm-line .lotus-llvm-global,
+.cm-line .lotus-llvm-intrinsic {
+  color: var(--color-blue);
+}
+
+.lotus-llvm-code .lotus-llvm-local,
+.cm-line .lotus-llvm-local {
+  color: var(--color-purple);
+}
+
+.lotus-llvm-code .lotus-llvm-label,
+.lotus-llvm-code .lotus-llvm-comdat,
+.lotus-llvm-code .lotus-llvm-metadata,
+.cm-line .lotus-llvm-label,
+.cm-line .lotus-llvm-comdat,
+.cm-line .lotus-llvm-metadata {
+  color: var(--color-pink);
+}
+
+.lotus-llvm-code .lotus-llvm-number,
+.lotus-llvm-code .lotus-llvm-predicate,
+.cm-line .lotus-llvm-number,
+.cm-line .lotus-llvm-predicate {
+  color: var(--color-yellow);
+}
+
+.lotus-llvm-code .lotus-llvm-constant,
+.cm-line .lotus-llvm-constant {
+  color: var(--color-accent);
+}
+
+.lotus-llvm-code .lotus-llvm-punctuation,
+.cm-line .lotus-llvm-punctuation {
+  color: var(--text-muted);
+}
+
+@keyframes lotus-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media print {
+  body .lotus-code-toolbar,
+  body .lotus-stdin-panel,
+  body .lotus-inline-output-host:empty {
+    display: none;
+  }
+
+  .lotus-output-panel {
+    page-break-inside: avoid;
+  }
+
+  body .lotus-print-hide-code {
+    display: none;
+  }
+
+  body .lotus-print-hide-output {
+    display: none;
+  }
+}
+
+/* Tabbed Interface for Container Group Editor */
+.lotus-tab-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.lotus-tab-header {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--background-modifier-border);
+  padding-bottom: 0.5rem;
+  overflow-x: auto;
+}
+
+.lotus-tab-btn {
+  background: transparent;
+  border: none;
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.lotus-tab-btn:hover {
+  background: var(--background-modifier-hover);
+  color: var(--text-normal);
+}
+
+.lotus-tab-btn.is-active {
+  background: var(--background-modifier-active-hover);
+  color: var(--text-accent);
+  font-weight: 600;
+}
+
+.lotus-tab-content {
+  min-height: 250px;
+}
+
+.lotus-language-card {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  background: var(--background-primary-alt);
+}

@@ -1,0 +1,52 @@
+/* --- Obsidian Heading Hierarchy Indentation (High Priority) --- */
+
+.markdown-rendered {
+  container-type: inline-size;
+  --heading-indent-step: 4cqw;
+}
+
+/* Helper to apply the property to both headings and following blocks safely */
+#foo { display: none; } 
+
+/* Level 1 - Base level */
+.markdown-rendered h1, 
+.markdown-rendered .cm-embed-block:has(h1) ~,
+.markdown-rendered div:has(> h1) ~ div {
+  padding-left: 0% !important;
+}
+
+/* Level 2 */
+.markdown-rendered h2, 
+.markdown-rendered div:has(> h2) ~ div:not(:has(h1)),
+.markdown-rendered h2 ~ *:not(h1, h2, h3, h4, h5, h6) {
+  padding-left: calc(var(--heading-indent-step) * 1) !important;
+}
+
+/* Level 3 */
+.markdown-rendered h3, 
+.markdown-rendered div:has(> h3) ~ div:not(:has(h1, h2)),
+.markdown-rendered h3 ~ *:not(h1, h2, h3, h4, h5, h6) {
+  padding-left: calc(var(--heading-indent-step) * 2) !important;
+}
+
+/* Level 4 */
+.markdown-rendered h4, 
+.markdown-rendered div:has(> h4) ~ div:not(:has(h1, h2, h3)),
+.markdown-rendered h4 ~ *:not(h1, h2, h3, h4, h5, h6) {
+  padding-left: calc(var(--heading-indent-step) * 3) !important;
+}
+
+/* Level 5 */
+.markdown-rendered h5, 
+.markdown-rendered div:has(> h5) ~ div:not(:has(h1, h2, h3, h4)),
+.markdown-rendered h5 ~ *:not(h1, h2, h3, h4, h5, h6) {
+  padding-left: calc(var(--heading-indent-step) * 4) !important;
+}
+
+/* Level 6 */
+.markdown-rendered h6, 
+.markdown-rendered div:has(> h6) ~ div:not(:has(h1, h2, h3, h4, h5)),
+.markdown-rendered h6 ~ *:not(h1, h2, h3, h4, h5, h6) {
+  padding-left: calc(var(--heading-indent-step) * 5) !important;
+}
+

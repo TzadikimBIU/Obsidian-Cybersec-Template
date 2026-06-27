@@ -1,0 +1,11 @@
+@media print {
+  /* Prevent code blocks from wrapping and force horizontal overflow instead of breaking lines */
+  .markdown-preview-view pre,
+  .markdown-rendered pre,
+  pre > code,
+  code[class*="language-"] {
+    white-space: pre !important;
+    word-break: normal !important;
+    overflow-wrap: normal !important;
+  }
+}

@@ -1,0 +1,49 @@
+/* Academic PDF Export Snippet - Forced Font Edition */
+
+@media print {
+    /* Set Page Margins and Size */
+    @page {
+        margin: 2.54cm;
+        size: A4;
+    }
+
+    /* Force Times New Roman on all elements */
+    /* We use !important to override Obsidian's default print themes */
+    body, p, div, h1, h2, h3, h4, h5, h6, li, span {
+        font-family: 'Times New Roman', Times, serif !important;
+        line-height: 1.6 !important;
+        color: black !important;
+        text-align: justify !important;
+    }
+
+    /* Adjusting for Hebrew/RTL specifically if needed */
+    [dir="rtl"], .rtl {
+        font-family: 'Times New Roman', 'David', serif !important;
+        direction: rtl;
+        text-align: right !important;
+    }
+
+    /* Title Styling */
+    h1 {
+        text-align: center !important;
+        margin-bottom: 1.5em !important;
+        font-size: 24pt !important;
+    }
+
+    /* Subheadings */
+    h2 {
+        font-size: 16pt !important;
+        margin-top: 1.5em !important;
+        border-bottom: 1px solid #eee !important;
+    }
+
+    /* Ensure Bibliography remains clean */
+    .bibliography, .references {
+        font-size: 11pt !important;
+    }
+
+    /* Hide UI elements */
+    .nav-header, .metadata-container, .side-dock, .mod-footer {
+        display: none !important;
+    }
+}

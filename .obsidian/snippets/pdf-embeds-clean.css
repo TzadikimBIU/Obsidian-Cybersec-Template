@@ -1,0 +1,19 @@
+@media print {
+  /* Remove border, padding, margins, and background for note embeds when printing */
+  .markdown-preview-view .markdown-embed,
+  .markdown-rendered .markdown-embed,
+  .internal-embed {
+    border: none !important;
+    border-left: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  /* Hide the title and reference link indicator for embedded notes for seamless flow */
+  .markdown-embed-link,
+  .markdown-embed-title {
+    display: none !important;
+  }
+}

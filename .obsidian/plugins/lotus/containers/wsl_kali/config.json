@@ -1,0 +1,10 @@
+{
+  "runtime": "wsl",
+  "image": "kali-linux",
+  "elevation": { "mode": "default" },
+  "languages": {
+    "python": { "command": "python3 {file}", "extension": ".py" },
+    "shell": { "command": "bash {file}", "extension": ".sh" },
+    "c": { "command": "gcc {file} -o /tmp/lotus-bin && /tmp/lotus-bin", "extension": ".c" }
+  }
+}

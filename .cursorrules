@@ -1,0 +1,16 @@
+# 🧠 Obsidian Vault AI Rules
+
+Please read the master AI Guide at [AI.md](AI.md) before performing any operations in this vault.
+
+## Quick Summary:
+- **Structure**:
+  - `000 Home MOC.md` is the command center.
+  - `010 Projects/` for projects.
+  - `020 Courses/` for online/general learning.
+  - `021 University/` for academic university courses.
+  - `090 System/` for templates and configuration.
+- **Workflow**:
+  - Do not create project, course, or lecture notes manually. Encourage the user to run the Templater scripts (`New Project Script.md`, `New Uni Course Script.md`, `New Course Script.md`, `Smart Note Creator.md`).
+- **Metadata**:
+  - Always preserve frontmatter schemas (`type`, `status`, `order`, etc.).
+  - Always link internal notes using double brackets: `[[Note Name]]`.

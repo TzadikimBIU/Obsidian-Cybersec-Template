@@ -1,0 +1,20 @@
+/* --- Force Collapse Arrows to Always Show in Reading Mode --- */
+.markdown-rendered .collapse-indicator {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* Optional: Slight opacity tweak for an elegant look, making them fully bright on hover */
+.markdown-rendered .collapse-indicator {
+  opacity: 0.5 !important;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.markdown-rendered h1:hover .collapse-indicator,
+.markdown-rendered h2:hover .collapse-indicator,
+.markdown-rendered h3:hover .collapse-indicator,
+.markdown-rendered h4:hover .collapse-indicator,
+.markdown-rendered h5:hover .collapse-indicator,
+.markdown-rendered h6:hover .collapse-indicator {
+  opacity: 1 !important;
+}

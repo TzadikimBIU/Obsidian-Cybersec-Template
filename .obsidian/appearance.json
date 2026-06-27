@@ -1,0 +1,12 @@
+{
+  "theme": "obsidian",
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "BetterMermaid",
+    "custom-dashboard",
+    "pdf-page-breaks",
+    "pdf-code-nowrap",
+    "pdf-embeds-clean"
+  ],
+  "baseFontSize": 16
+}

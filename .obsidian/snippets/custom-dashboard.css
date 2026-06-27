@@ -1,0 +1,111 @@
+/* custom-dashboard.css */
+
+/* ==========================================================================
+   Meta Bind Button Premium Styles
+   ========================================================================== */
+
+/* Core button resets and design */
+.mb-button button {
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  border: none !important;
+  padding: 10px 18px !important;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) !important;
+  cursor: pointer !important;
+  width: 100% !important;
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.mb-button button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25) !important;
+  filter: brightness(1.08) !important;
+}
+
+.mb-button button:active {
+  transform: translateY(1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 🧠 Instant Idea (Purple/Indigo Gradient) */
+.btn-idea button {
+  background: linear-gradient(135deg, #8b5cf6, #6366f1) !important;
+}
+.btn-idea button:hover {
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4) !important;
+}
+
+/* 📓 Daily Note (Emerald/Teal Gradient) */
+.btn-daily button {
+  background: linear-gradient(135deg, #10b981, #06b6d4) !important;
+}
+.btn-daily button:hover {
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4) !important;
+}
+
+/* 📝 New Assignment (Rose/Pink Gradient) */
+.btn-homework button {
+  background: linear-gradient(135deg, #f43f5e, #ec4899) !important;
+}
+.btn-homework button:hover {
+  box-shadow: 0 0 15px rgba(244, 63, 94, 0.4) !important;
+}
+
+/* 🚀 Create Project (Orange/Coral Gradient) */
+.btn-project button {
+  background: linear-gradient(135deg, #f97316, #f43f5e) !important;
+}
+.btn-project button:hover {
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.4) !important;
+}
+
+/* 🎓 Start Course (Blue/Sky Gradient) */
+.btn-course button {
+  background: linear-gradient(135deg, #3b82f6, #0ea5e9) !important;
+}
+.btn-course button:hover {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* ==========================================================================
+   🗺️ Navigation Card Grid System
+   ========================================================================== */
+
+.nav-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 12px !important;
+  margin-top: 14px !important;
+  margin-bottom: 8px !important;
+}
+
+/* Target internal links rendered inside our grid */
+.nav-cards a.internal-link {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 16px 12px !important;
+  background: var(--background-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 10px !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+  font-size: 1.05em !important;
+  color: var(--text-normal) !important;
+  transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05) !important;
+  text-align: center !important;
+}
+
+.nav-cards a.internal-link:hover {
+  background: var(--background-secondary-alt) !important;
+  border-color: var(--interactive-accent) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12) !important;
+  color: var(--interactive-accent) !important;
+}

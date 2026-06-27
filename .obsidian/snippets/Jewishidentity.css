@@ -1,0 +1,48 @@
+/* הגדרות עבור ייצוא ל-PDF בלבד */
+@media print {
+    body {
+        /* הגדרת גופן דיוויד - חייב להיות מותקן על המחשב שלך */
+        font-family: 'David', 'David Libre', serif !important;
+        
+        /* גודל גופן 12 נקודות */
+        font-size: 12pt !important;
+        
+        /* מרווח שורה וחצי */
+        line-height: 1.5 !important;
+        
+        /* יישור טקסט לשני הצדדים (אופציונלי אך נהוג באקדמיה) */
+        text-align: justify;
+        
+        /* צבע שחור מלא להדפסה */
+        color: black !important;
+    }
+
+    /* הגדרת כותרות - ניתן להתאים את הגודל לפי הצורך */
+    h1, h2, h3, h4 {
+        font-family: 'David', 'David Libre', serif !important;
+        line-height: 1.2 !important;
+        margin-top: 1.5em !important;
+        margin-bottom: 0.5em !important;
+        page-break-after: avoid;
+    }
+
+    h1 { font-size: 18pt !important; }
+    h2 { font-size: 16pt !important; }
+    h3 { font-size: 14pt !important; }
+
+    /* הגדרת שוליים לדף A4 */
+    @page {
+        size: A4;
+        margin: 2.5cm; /* שוליים סטנדרטיים של 2.5 ס"מ מכל צד */
+    }
+
+    /* ביטול צבעי הרקע של Obsidian כדי שהדף יהיה לבן נקי */
+    .markdown-rendered {
+        background-color: white !important;
+    }
+
+    /* הגדרת פסקאות */
+    p {
+        margin-bottom: 1em !important;
+    }
+}
