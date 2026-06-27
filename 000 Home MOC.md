@@ -4,87 +4,88 @@ researcher_name: ""
 cssclasses:
   - home-moc
 ---
-# 🛡️ Cybersecurity Research Command Center
+# 🛡️ Cybersecurity Command Center
 
----
 
-### ⚡ Quick Actions
-
-```meta-bind-button
-style: primary
-label: "🎯 New Engagement"
-class: btn-project
-action:
-  type: runTemplaterFile
-  templateFile: "090 System/000 Templates/New Engagement Script.md"
-```
-
-```meta-bind-button
-style: primary
-label: "🔴 New Finding"
-class: btn-homework
-action:
-  type: runTemplaterFile
-  templateFile: "090 System/000 Templates/New Finding Script.md"
-```
-
-```meta-bind-button
-style: primary
-label: "🦠 New Malware Analysis"
-class: btn-daily
-action:
-  type: runTemplaterFile
-  templateFile: "090 System/000 Templates/New Malware Analysis Script.md"
-```
-
-```meta-bind-button
-style: primary
-label: "🔭 New Topic Research"
-class: btn-idea
-action:
-  type: runTemplaterFile
-  templateFile: "090 System/000 Templates/New Topic Research Script.md"
-```
-
-```meta-bind-button
-style: primary
-label: "🚩 New CTF Challenge"
-class: btn-course
-action:
-  type: runTemplaterFile
-  templateFile: "090 System/000 Templates/New CTF Script.md"
-```
-
-```meta-bind-button
-style: primary
-label: "🚨 New DFIR Case"
-class: btn-homework
-action:
-  type: runTemplaterFile
-  templateFile: "090 System/000 Templates/New DFIR Case Script.md"
-```
-
-```meta-bind-button
-style: primary
-label: "📅 Daily Log"
-class: btn-daily
-action:
-  type: command
-  command: daily-notes
-```
-
----
-
-### 🗺️ Navigation
-
-- [[010 Engagements/Active|🎯 Active Engagements]]
-- [[011 CTF|🚩 CTF]]
-- [[012 Vuln Research|🔬 Vuln Research]]
-- [[013 Topic Research|🔭 Topic Research]]
-- [[020 Threat Intel|📡 Threat Intel]]
-- [[021 Malware Analysis|🦠 Malware Analysis]]
-- [[040 Knowledge Base|📚 Knowledge Base]]
-- [[080 DFIR|🚨 DFIR]]
+> [!multi-column]
+>
+> > ### ⚡ Quick Capture
+> > ```meta-bind-button
+> > style: primary
+> > label: "📓 Daily Journal"
+> > action:
+> >   type: command
+> >   command: daily-notes
+> > ```
+> > ```meta-bind-button
+> > style: primary
+> > label: "🎯 New Engagement"
+> > action:
+> >   type: runTemplaterFile
+> >   templateFile: "090 System/000 Templates/New Engagement Script.md"
+> > ```
+> > ```meta-bind-button
+> > style: primary
+> > label: "🔬 New Research"
+> > action:
+> >   type: runTemplaterFile
+> >   templateFile: "090 System/000 Templates/New Topic Research Script.md"
+> > ```
+> > ```meta-bind-button
+> > style: primary
+> > label: "🦠 Malware Analysis"
+> > action:
+> >   type: runTemplaterFile
+> >   templateFile: "090 System/000 Templates/New Malware Analysis Script.md"
+> > ```
+> >
+> > > [!caption] Quick Creation
+> > > ```meta-bind-button
+> > > style: default
+> > > label: "🚩 New CTF Challenge"
+> > > action:
+> > >   type: runTemplaterFile
+> > >   templateFile: "090 System/000 Templates/New CTF Script.md"
+> > > ```
+> > > ```meta-bind-button
+> > > style: default
+> > > label: "🚨 New DFIR Case"
+> > > action:
+> > >   type: runTemplaterFile
+> > >   templateFile: "090 System/000 Templates/New DFIR Case Script.md"
+> > > ```
+> > > ```meta-bind-button
+> > > style: default
+> > > label: "🖥️ New Lab Machine"
+> > > action:
+> > >   type: runTemplaterFile
+> > >   templateFile: "090 System/000 Templates/New Lab Machine Script.md"
+> > > ```
+> > > ```meta-bind-button
+> > > style: default
+> > > label: "🐛 New CVE Note"
+> > > action:
+> > >   type: runTemplaterFile
+> > >   templateFile: "090 System/000 Templates/New CVE Script.md"
+> > > ```
+> >
+> > > ### 🗺️ Navigation
+> > > - **Core Operations**
+> > >   - [[010 Engagements|🎯 Engagements]]
+> > >   - [[080 DFIR|🚨 DFIR Cases]]
+> > >   - [[070 Reporting|📄 Reporting]]
+> > > - **Research & Intelligence**
+> > >   - [[012 Vuln Research|🔍 Vuln Research]]
+> > >   - [[013 Topic Research|🔬 Topic Research]]
+> > >   - [[020 Threat Intel|📡 Threat Intel]]
+> > >   - [[021 Malware Analysis|🦠 Malware Analysis]]
+> > > - **Knowledge & Reference**
+> > >   - [[040 Knowledge Base|🧠 MITRE KB]]
+> > >   - [[030 Tools|🔧 Tool Database]]
+> > >   - [[050 References|📚 Reference Library]]
+> > > - **Training & Labs**
+> > >   - [[011 CTF|🚩 CTF Writeups]]
+> > >   - [[060 Labs|🖥️ Practice Labs]]
 
 ---
 

@@ -5,12 +5,16 @@ Please read the master AI Guide at [AI.md](AI.md) before performing any operatio
 ## Quick Summary:
 - **Structure**:
   - `000 Home MOC.md` is the command center.
-  - `010 Projects/` for projects.
-  - `020 Courses/` for online/general learning.
-  - `021 University/` for academic university courses.
-  - `090 System/` for templates and configuration.
+  - `001 Daily Logs/` for daily journals.
+  - `010 Engagements/` for client security engagements and findings.
+  - `011 CTF/` for CTF challenge writeups.
+  - `012 Vuln Research/` and `013 Topic Research/` for vulnerability and domain research.
+  - `021 Malware Analysis/` for malware reversing sessions.
+  - `080 DFIR/` for incident response cases and playbooks.
+  - `040 Knowledge Base/` for permanent MITRE technique notes.
+  - `090 System/` for configurations and templates.
 - **Workflow**:
-  - Do not create project, course, or lecture notes manually. Encourage the user to run the Templater scripts (`New Project Script.md`, `New Uni Course Script.md`, `New Course Script.md`, `Smart Note Creator.md`).
+  - Do not create engagement, finding, research, or malware notes manually. Encourage the user to run the Templater scripts (`New Engagement Script.md`, `New Finding Script.md`, `New Topic Research Script.md`, `New Malware Analysis Script.md`, `New CTF Script.md`, `New DFIR Case Script.md`, `Smart Sec Note Creator.md`, etc.).
 - **Metadata**:
-  - Always preserve frontmatter schemas (`type`, `status`, `order`, etc.).
+  - Always preserve frontmatter schemas (`type`, `status`, `severity`, etc.).
   - Always link internal notes using double brackets: `[[Note Name]]`.

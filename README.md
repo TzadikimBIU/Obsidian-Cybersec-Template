@@ -91,10 +91,38 @@ All scripts live in `090 System/000 Templates/` and are triggered via **MetaBind
 | **New Malware Analysis** | `021 Malware Analysis/<Name>/` with full analysis folder |
 | **New CTF Challenge** | Challenge note routed to correct CTF/category folder |
 | **New DFIR Case** | Auto-numbered `INC-NNN` case with MOC, Timeline, and IOC notes |
-| **New CVE** | CVE reference note in `050 References/CVEs/` |
 | **New Lab Machine** | Machine note in the correct lab platform folder |
+| **New CVE** | CVE reference note in `050 References/CVEs/` |
 | **Generate Report** | Collects all engagement findings; choose **Outline** or **Full Report** |
 | **Smart Sec Note Creator** | Context-aware note creator — run from any MOC |
+
+### 🎛️ MetaBind Control Panel Buttons
+
+The **`000 Home MOC.md`** command center contains quick-action buttons powered by **MetaBind**:
+*   **📓 Daily Journal**: Opens or creates the Daily Log note for today (`001 Daily Logs/YYYY-MM-DD.md`) using Obsidian's daily notes command.
+*   **🎯 New Engagement**: Triggers the `New Engagement Script.md` to scaffold a client folder and create an Engagement MOC.
+*   **🔬 New Research**: Triggers the `New Topic Research Script.md` to begin a self-directed topic research folder structure.
+*   **🦠 Malware Analysis**: Triggers the `New Malware Analysis Script.md` to reverse engineer a specific sample.
+*   **🚩 New CTF Challenge**: Triggers the `New CTF Script.md` to write a CTF writeup note.
+*   **🚨 New DFIR Case**: Triggers the `New DFIR Case Script.md` to scaffold an incident case folder with Timeline and IOC trackers.
+*   **🖥️ New Lab Machine**: Triggers the `New Lab Machine Script.md` to write a walkthrough for HTB/THM machines.
+*   **🐛 New CVE Note**: Triggers the `New CVE Script.md` to create a reference note for a vulnerability.
+
+### 📋 Templater Notes & Templates
+
+The vault comes with pre-configured templates under `090 System/000 Templates/` to standardize metadata schemas for Dataview dashboards:
+*   **`Daily Log Template.md`**: For logging objectives, session diaries, commands run, findings, and next-day planning.
+*   **`Engagement MOC Template.md`**: Standardizes client dashboards, detailing CVSS aggregations, scope blocks, active findings, and tasks.
+*   **`Finding Template.md`**: Used for recording vulnerability findings with severity ratings, CVSS score/vector, CVE/CWE, affected components, steps to reproduce (with Lotus code blocks), evidence, and recommendations.
+*   **`Topic Research MOC Template.md`**: Tracks key research questions, literature reading status, progress journals, and experiments.
+*   **`Research Experiment Template.md`**: For writing down isolated tests or PoC code within a topic research area.
+*   **`Malware Analysis Template.md`**: For tracking file hashes (MD5/SHA256), static reversing metadata (strings, imports/exports), dynamic behavior logs, and MITRE ATT&CK mapping.
+*   **`CTF Challenge Template.md`**: Details solved CTF challenges, flags, walkthroughs, and maps them to real-world techniques.
+*   **`DFIR Playbook Template.md`**: Outlines incident response phase checklists (Triage, Containment, Investigation, Eradication, Recovery, Lessons Learned).
+*   **`Lab Machine Template.md`**: Structures lab machine writeups (Nmap port scans, footholds, privilege escalation, user/root flags).
+*   **`CVE Template.md`**: Holds technical details, exploit availability, PoCs, and remediations for specific CVE vulnerability entries.
+*   **`Technique Note Template.md`**: Holds permanent MITRE ATT&CK technique descriptions, Sigma/YARA rules, and threat actor maps.
+*   **`Tool Note Template.md`**: Configures cheat sheets, installation steps, and CLI one-liners for security tools.
 
 ---
 
