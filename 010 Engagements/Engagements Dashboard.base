@@ -1,0 +1,47 @@
+filters:
+  and:
+    - file.folder.startsWith(this.file.folder)
+views:
+  - type: table
+    name: 🎯 ALL ENGAGEMENTS
+    filters:
+      and:
+        - type == "engagement_moc"
+    order:
+      - file.name
+      - client
+      - status
+      - engagement_type
+      - start_date
+      - end_date
+    sort:
+      - property: start_date
+        direction: DESC
+  - type: table
+    name: 🔥 ACTIVE
+    filters:
+      and:
+        - status == "active"
+        - type == "engagement_moc"
+    order:
+      - file.name
+      - client
+      - engagement_type
+      - end_date
+    sort:
+      - property: end_date
+        direction: ASC
+  - type: table
+    name: 💤 ARCHIVED
+    filters:
+      and:
+        - status == "completed"
+        - type == "engagement_moc"
+    order:
+      - file.name
+      - client
+      - engagement_type
+      - end_date
+    sort:
+      - property: end_date
+        direction: DESC

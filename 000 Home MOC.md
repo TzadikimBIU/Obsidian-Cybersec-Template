@@ -71,21 +71,22 @@ cssclasses:
 > >
 > > > ### 🗺️ Navigation
 > > > - **Core Operations**
-> > >   - [[010 Engagements|🎯 Engagements]]
-> > >   - [[080 DFIR|🚨 DFIR Cases]]
+> > >   - [[000 Engagements MOC|🎯 Engagements]]
+> > >   - [[000 DFIR MOC|🚨 DFIR Cases]]
 > > >   - [[070 Reporting|📄 Reporting]]
 > > > - **Research & Intelligence**
-> > >   - [[012 Vuln Research|🔍 Vuln Research]]
-> > >   - [[013 Topic Research|🔬 Topic Research]]
-> > >   - [[020 Threat Intel|📡 Threat Intel]]
-> > >   - [[021 Malware Analysis|🦠 Malware Analysis]]
+> > >   - [[000 Vuln Research MOC|🔍 Vuln Research]]
+> > >   - [[000 Topic Research MOC|🔬 Topic Research]]
+> > >   - [[000 Threat Intel MOC|📡 Threat Intel]]
+> > >   - [[000 Malware Analysis MOC|🦠 Malware Analysis]]
 > > > - **Knowledge & Reference**
-> > >   - [[040 Knowledge Base|🧠 MITRE KB]]
-> > >   - [[030 Tools|🔧 Tool Database]]
-> > >   - [[050 References|📚 Reference Library]]
+> > >   - [[000 Knowledge Base MOC|🧠 MITRE KB]]
+> > >   - [[000 Tools MOC|🔧 Tool Database]]
+> > >   - [[000 References MOC|📚 Reference Library]]
 > > > - **Training & Labs**
-> > >   - [[011 CTF|🚩 CTF Writeups]]
-> > >   - [[060 Labs|🖥️ Practice Labs]]
+> > >   - [[000 CTF MOC|🚩 CTF Writeups]]
+> > >   - [[000 Labs MOC|🖥️ Practice Labs]]
+
 
 ---
 

@@ -1,0 +1,31 @@
+filters:
+  and:
+    - file.folder.startsWith(this.file.folder)
+views:
+  - type: table
+    name: 👥 APT GROUPS
+    filters:
+      and:
+        - type == "threat_intel"
+        - intel_type == "apt_group"
+    order:
+      - file.name
+      - origin
+      - target_sectors
+      - last_updated
+    sort:
+      - property: last_updated
+        direction: DESC
+  - type: table
+    name: 💥 CAMPAIGNS
+    filters:
+      and:
+        - type == "threat_intel"
+        - intel_type == "campaign"
+    order:
+      - file.name
+      - threat_actor
+      - date_observed
+    sort:
+      - property: date_observed
+        direction: DESC

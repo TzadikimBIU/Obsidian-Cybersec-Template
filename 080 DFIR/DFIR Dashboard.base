@@ -1,0 +1,34 @@
+filters:
+  and:
+    - file.folder.startsWith(this.file.folder)
+views:
+  - type: table
+    name: 🚨 ACTIVE CASES
+    filters:
+      and:
+        - type == "dfir_case"
+        - status == "open"
+    order:
+      - file.name
+      - case_id
+      - description
+      - severity
+      - date_opened
+    sort:
+      - property: date_opened
+        direction: DESC
+  - type: table
+    name: ✅ CLOSED CASES
+    filters:
+      and:
+        - type == "dfir_case"
+        - status == "closed"
+    order:
+      - file.name
+      - case_id
+      - description
+      - date_opened
+      - date_closed
+    sort:
+      - property: date_closed
+        direction: DESC

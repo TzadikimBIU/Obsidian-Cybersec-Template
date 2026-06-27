@@ -1,0 +1,32 @@
+filters:
+  and:
+    - file.folder.startsWith(this.file.folder)
+views:
+  - type: table
+    name: 🔭 ACTIVE RESEARCH
+    filters:
+      and:
+        - type == "topic_research_moc"
+        - status == "active"
+    order:
+      - file.name
+      - topic
+      - started
+      - last_updated
+    sort:
+      - property: last_updated
+        direction: DESC
+  - type: table
+    name: 💤 ON HOLD / COMPLETE
+    filters:
+      and:
+        - type == "topic_research_moc"
+        - status != "active"
+    order:
+      - file.name
+      - topic
+      - status
+      - last_updated
+    sort:
+      - property: last_updated
+        direction: DESC

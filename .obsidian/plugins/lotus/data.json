@@ -1,7 +1,7 @@
 {
   "enableLocalExecution": true,
   "hasAcknowledgedExecutionRisk": true,
-  "preserveSourceMode": true,
+  "preserveSourceMode": false,
   "defaultTimeoutMs": 10000,
   "workingDirectory": "",
   "pythonExecutable": "python",

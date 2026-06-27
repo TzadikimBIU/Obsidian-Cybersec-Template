@@ -1,0 +1,30 @@
+filters:
+  and:
+    - file.folder.startsWith(this.file.folder)
+views:
+  - type: table
+    name: 🔍 ACTIVE TARGETS
+    filters:
+      and:
+        - type == "vuln_research_moc"
+        - status == "active"
+    order:
+      - file.name
+      - status
+      - last_updated
+    sort:
+      - property: last_updated
+        direction: DESC
+  - type: table
+    name: 📁 ALL TARGETS
+    filters:
+      and:
+        - type == "vuln_research_moc"
+    order:
+      - file.name
+      - status
+      - started
+      - last_updated
+    sort:
+      - property: last_updated
+        direction: DESC

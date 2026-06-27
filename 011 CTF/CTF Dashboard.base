@@ -1,0 +1,34 @@
+filters:
+  and:
+    - file.folder.startsWith(this.file.folder)
+views:
+  - type: table
+    name: 🏆 OPEN CHALLENGES
+    filters:
+      and:
+        - type == "ctf_challenge"
+        - solved == false
+    order:
+      - file.name
+      - ctf
+      - category
+      - difficulty
+      - points
+    sort:
+      - property: points
+        direction: DESC
+  - type: table
+    name: ✅ SOLVED
+    filters:
+      and:
+        - type == "ctf_challenge"
+        - solved == true
+    order:
+      - file.name
+      - ctf
+      - category
+      - points
+      - real_world_cve
+    sort:
+      - property: points
+        direction: DESC
